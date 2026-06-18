@@ -281,7 +281,7 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-height: 66px;
+  min-height: 72px;
 }
 
 .brand { display: inline-flex; align-items: center; gap: .55rem; color: var(--green-800); }
@@ -918,6 +918,7 @@ p { margin: 0 0 1em; }
   align-items: start;
   margin-top: 2.4rem;
 }
+.contact--solo { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
 .contact__media { display: grid; gap: 1.4rem; justify-items: center; }
 .contact__logos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; }
 .contact__logos .image-slot { background: rgba(255, 255, 255, .92); border-color: rgba(255, 255, 255, .3); }
@@ -971,7 +972,7 @@ p { margin: 0 0 1em; }
 /* ---------- 11b. NEW COMPONENTS (v2) ---------- */
 
 /* Header: logo game (trái) + logo studio (phải) */
-.brand__logo { height: 38px; width: auto; display: block; }
+.brand__logo { height: 46px; width: auto; display: block; }
 .site-header__right { display: flex; align-items: center; gap: 1rem; }
 .site-header__studio { display: flex; align-items: center; gap: .5rem; }
 .site-header__by {
@@ -984,7 +985,7 @@ p { margin: 0 0 1em; }
   max-width: 58px;
   text-align: right;
 }
-.studio-logo { height: 30px; width: auto; display: block; }
+.studio-logo { height: 34px; width: auto; display: block; }
 .site-header__studio::before {
   content: "";
   width: 1px; height: 26px;
@@ -1070,7 +1071,7 @@ p { margin: 0 0 1em; }
   .nav-list a::after { display: none; }
   .site-header__cta { display: none; }
   .site-header__studio { display: none; }
-  .brand__logo { height: 32px; }
+  .brand__logo { height: 40px; }
 
   /* Stack layouts */
   .split { grid-template-columns: 1fr; }

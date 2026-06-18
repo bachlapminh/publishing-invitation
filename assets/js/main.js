@@ -349,20 +349,27 @@
           ct.paragraphs.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('') + '</div>' +
         '<div class="cta-banner" data-reveal><p class="cta-banner__text">' +
           '<strong>' + esc(ct.ctaBanner.strong) + '</strong> ' + esc(ct.ctaBanner.text) + '</p></div>' +
-        '<div class="contact" data-reveal>' +
-          '<div class="contact__info"><dl class="facts facts--light">' +
-            ct.fields.map(function (f) {
-              return '<div class="facts__row"><dt>' + esc(f.k) + '</dt><dd>' + txt(f.v, { inline: true }) + '</dd></div>';
-            }).join('') +
-          '</dl></div>' +
-          '<div class="contact__media"><div class="media media--qr">' +
-            slot(ct.qr.image, { cls: 'image-slot--qr' }) +
-            '<p class="media__cap media__cap--light">' + esc(ct.qr.caption) + '</p></div>' +
-            '<div class="contact__logos">' +
-              ct.logos.map(function (fn) { return slot(fn, { cls: 'image-slot--logo' }); }).join('') +
-            '</div>' +
-          '</div>' +
-        '</div></div></section>';
+        contactBlock(ct) +
+      '</div></section>';
+  }
+
+  // Khối liên hệ — QR và logos là TÙY CHỌN (không có thì bỏ qua, không lỗi)
+  function contactBlock(ct) {
+    var info = '<div class="contact__info"><dl class="facts facts--light">' +
+      ct.fields.map(function (f) {
+        return '<div class="facts__row"><dt>' + esc(f.k) + '</dt><dd>' + txt(f.v, { inline: true }) + '</dd></div>';
+      }).join('') + '</dl></div>';
+    var qr = ct.qr
+      ? '<div class="media media--qr">' + slot(ct.qr.image, { cls: 'image-slot--qr' }) +
+          '<p class="media__cap media__cap--light">' + esc(ct.qr.caption) + '</p></div>'
+      : '';
+    var logos = (ct.logos && ct.logos.length)
+      ? '<div class="contact__logos">' +
+          ct.logos.map(function (fn) { return slot(fn, { cls: 'image-slot--logo' }); }).join('') + '</div>'
+      : '';
+    var media = (qr || logos) ? '<div class="contact__media">' + qr + logos + '</div>' : '';
+    var cls = media ? 'contact' : 'contact contact--solo';
+    return '<div class="' + cls + '" data-reveal>' + info + media + '</div>';
   }
 
   function buildFooter(C) {

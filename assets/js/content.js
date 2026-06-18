@@ -193,7 +193,7 @@ window.SITE_CONTENT = {
     mediaCard: { image: "SCREENSHOT_BOSS_EVENT_01.jpg", caption: "Boss & sự kiện trong game" },
     gallery: [
       { image: "SCREENSHOT_COMBAT_02.jpg", caption: "Combo kỹ năng" },
-      { image: "SCREENSHOT_SHOP_IAP_01.png", caption: "Cửa hàng & vật phẩm (ảnh bổ sung sau)" }
+      { image: "shop.jpg", caption: "Cửa hàng & giao dịch vật phẩm" }
     ]
   },
 
@@ -207,7 +207,7 @@ window.SITE_CONTENT = {
       { image: "SCREENSHOT_COMBAT_02.jpg",     caption: "Kỹ năng" },
       { image: "SCREENSHOT_BOSS_EVENT_01.jpg", caption: "Boss & sự kiện lớn" },
       { image: "SCREENSHOT_CHARACTER_01.jpg",  caption: "Nhân vật & đồng đội" },
-      { image: "SCREENSHOT_SHOP_IAP_01.png",   caption: "Cửa hàng & thương mại (bổ sung sau)" }
+      { image: "shop.jpg",   caption: "Cửa hàng & thương mại" }
     ]
   },
 
@@ -298,20 +298,22 @@ window.SITE_CONTENT = {
     media: { image: "QR_GAMEPLAY_VIDEO.png", caption: "Quét QR — Video gameplay" }
   },
 
-  /* ====== SECTION 13 — PHÁP LÝ & NỘI DUNG (giọng trung thực, an toàn) ====== */
+  /* ====== SECTION 13 — PHÁP LÝ & NỘI DUNG (minh bạch IP, sẵn sàng phối hợp) ====== */
   legal: {
     eyebrow: "Pháp lý & nội dung",
-    title: "Định hướng pháp lý và nhận diện nội dung",
+    title: "Minh bạch nội dung và định hướng pháp lý",
     paragraphs: [
-      "Chiến Binh Huyền Thoại lấy cảm hứng từ dòng game nhập vai chiến đấu – biến thân vốn quen thuộc với người chơi. Ý thức rõ về vấn đề bản quyền, studio đã chủ động xây dựng một lớp nhận diện nội dung gốc: vũ trụ Dragon Balls với hệ thống nhân vật, cốt truyện, địa danh và thuật ngữ nguyên bản.",
+      "Chúng tôi minh bạch ngay từ đầu: phiên bản hiện tại của sản phẩm sử dụng nhiều yếu tố nhận diện và nội dung dựa trên IP Dragon Ball (Bảy Viên Ngọc Rồng) — một thương hiệu truyện tranh / anime nổi tiếng thuộc bên thứ ba. Studio ý thức rõ đây là nội dung cần được xử lý đúng quy định trước khi thương mại hóa chính thức.",
+      "Chúng tôi chủ động nêu rõ điều này để cùng publisher lựa chọn phương án phù hợp — bao gồm xin giấy phép IP nếu khả thi, hoặc chuyển đổi (re-skin) sang IP gốc đã được studio chuẩn bị sẵn (vũ trụ Dracoria), đồng thời đảm bảo điều kiện kiểm duyệt và phát hành trên các store."
     ],
     optionsTitle: "Các phương án có thể triển khai cùng publisher",
     options: [
-      "Rà soát phạm vi pháp lý trước khi phát hành",
+      "Xin giấy phép sử dụng IP Dragon Ball nếu khả thi",
+      "Chuyển đổi (re-skin) sang IP gốc — studio đã có sẵn bản dựng vũ trụ Dracoria",
       "Điều chỉnh nhận diện thương mại theo thị trường mục tiêu",
-      "Xây dựng phương án phát hành phù hợp quy định từng thị trường"
+      "Đảm bảo điều kiện kiểm duyệt & phát hành trên App Store / Google Play"
     ],
-    note: "Studio sẵn sàng phối hợp điều chỉnh sản phẩm theo yêu cầu của publisher để đảm bảo tính khả thi và an toàn pháp lý trong phát hành thương mại."
+    note: "Studio sẵn sàng phối hợp điều chỉnh và hoàn thiện sản phẩm theo yêu cầu của publisher để đảm bảo tính khả thi và an toàn pháp lý trong phát hành thương mại."
   },
 
   /* ====== SECTION 14 — LIÊN HỆ / CTA CUỐI ====== */
@@ -327,16 +329,10 @@ window.SITE_CONTENT = {
       text: "Sắp xếp buổi meeting / demo sản phẩm trong thời gian phù hợp với Quý Đối tác."
     },
     fields: [
-      { k: "Người đại diện",    v: "[TÊN]" },
-      { k: "Chức vụ",           v: "[CHỨC VỤ]" },
-      { k: "Công ty / Studio",  v: "[TÊN PHÁP NHÂN]" },
-      { k: "Email",             v: "[EMAIL]" },
-      { k: "Điện thoại / Zalo", v: "[SĐT]" },
-      { k: "Website / Fanpage", v: "[LINK]" },
-      { k: "Địa chỉ",           v: "[ĐỊA CHỈ NẾU CẦN]" }
+      { k: "Tên",   v: "Danny" },
+      { k: "Zalo",  v: "0888888444" },
+      { k: "Email", v: "khanh.apexgames@gmail.com" }
     ],
-    qr: { image: "QR_CONTACT.png", caption: "Quét QR — Liên hệ / Zalo / Website" },
-    logos: ["LOGO_GAME.png", "LOGO_STUDIO.png"]
   },
 
   /* ====== FOOTER ====== */
