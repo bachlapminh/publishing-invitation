@@ -612,7 +612,7 @@ p { margin: 0 0 1em; }
 .media { display: grid; gap: .6rem; }
 .media__cap { font-size: .88rem; color: var(--ink-500); margin: 0; text-align: center; }
 .media__cap--light { color: rgba(244, 239, 227, .7); }
-.media-row { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.1rem; align-items: start; }
+.media-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; align-items: start; }
 .media__logo { align-self: stretch; }
 
 /* Info grid (product specs) */
@@ -968,6 +968,72 @@ p { margin: 0 0 1em; }
 }
 [data-reveal].is-visible { opacity: 1; transform: none; }
 
+/* ---------- 11b. NEW COMPONENTS (v2) ---------- */
+
+/* Header: logo game (trái) + logo studio (phải) */
+.brand__logo { height: 38px; width: auto; display: block; }
+.site-header__right { display: flex; align-items: center; gap: 1rem; }
+.site-header__studio { display: flex; align-items: center; gap: .5rem; }
+.site-header__by {
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 700;
+  color: var(--ink-500);
+  line-height: 1.15;
+  max-width: 58px;
+  text-align: right;
+}
+.studio-logo { height: 30px; width: auto; display: block; }
+.site-header__studio::before {
+  content: "";
+  width: 1px; height: 26px;
+  background: var(--border-strong);
+  margin-right: .4rem;
+}
+
+/* Hero không key visual — 1 cột, tập trung nội dung */
+.hero--solo .hero__inner { grid-template-columns: 1fr; }
+.hero--solo .hero__content { max-width: 780px; }
+
+/* Câu hook mở đầu section */
+.section__lead {
+  font-size: clamp(1.12rem, 1.9vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--green-800);
+  max-width: 900px;
+  margin: 0 0 1.8rem;
+}
+
+/* Dải số liệu KPI */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  margin: 0 0 2.6rem;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.stat { background: var(--paper); padding: 1.35rem 1rem; text-align: center; }
+.stat__num {
+  display: block;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: var(--green-700);
+  line-height: 1;
+}
+.stat__label {
+  display: block;
+  margin-top: .5rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink-500);
+}
+
 /* ---------- 12. RESPONSIVE ---------- */
 @media (max-width: 1024px) {
   body { font-size: 16px; }
@@ -975,6 +1041,7 @@ p { margin: 0 0 1em; }
   .grid--systems { grid-template-columns: repeat(2, 1fr); }
   .info-grid { grid-template-columns: repeat(2, 1fr); }
   .hero__inner { gap: 2rem; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 860px) {
@@ -1002,6 +1069,8 @@ p { margin: 0 0 1em; }
   .nav-list a { display: block; padding: .85em .2em; font-size: 1rem; }
   .nav-list a::after { display: none; }
   .site-header__cta { display: none; }
+  .site-header__studio { display: none; }
+  .brand__logo { height: 32px; }
 
   /* Stack layouts */
   .split { grid-template-columns: 1fr; }
@@ -1027,6 +1096,7 @@ p { margin: 0 0 1em; }
   .gallery--3,
   .media-row { grid-template-columns: 1fr; }
   .info-grid__item--wide { grid-column: auto; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
   .facts__row { grid-template-columns: 1fr; gap: .2rem; }
   .hero__cta .btn { width: 100%; }
   .site-footer__inner { flex-direction: column; align-items: flex-start; }
